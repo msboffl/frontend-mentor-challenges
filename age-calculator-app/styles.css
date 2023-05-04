@@ -1,0 +1,144 @@
+/* @import url('https://fonts.google.com/specimen/Poppins'); */
+
+/* ===== Fonts ====== */
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('./assets/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Poppins-BoldItalic";
+    src: url('./assets/fonts/Poppins-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-ExtraBold';
+    src: url('./assets/fonts/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-ExtraBoldItalic';
+    src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Italic';
+    src: url('./assets/fonts/Poppins-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+
+/* ================ Variables ================ */
+:root {
+    /* ==== Devices ===== */
+    --desktop: 1440px --tablet: 768px;
+    --mobile: 430px;
+
+    /* ==== Colours ===== */
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --smoke-gray: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+body {
+    background-color: var(--off-white);
+    font-family: 'Poppins-Regular', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    background-color: var(--white);
+    max-width: 480px;
+    width: 100%;
+    border-radius: 1.5em 1.5em 10em 1.5em;
+    padding: 2.5rem;
+}
+
+.date-input {
+    display: flex;
+    margin-bottom: 2.5%;
+}
+
+.day-input,
+.month-input,
+.year-input {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    padding-right: 16px;
+}
+.day-input label,
+.month-input label,
+.year-input label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-family: 'Poppins-Bold';
+    color: var(--smoke-gray);
+}
+input[type="number"] {
+    font-size: 1.25rem;
+    font-family: "Poppins-Bold";
+    padding: 12px;
+    border: 1px solid var(--smoke-gray);
+    border-radius: 5px;
+    -moz-appearance: textfield;
+    outline: none;
+}
+input:focus, input:focus-visible {
+    border: 1px solid var(--purple);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.arrow-underline {
+    display: flex;
+    align-items: center;
+}
+
+.arrow-underline button {
+    border: none;
+    background: transparent;
+}
+
+.underline {
+    width: 100%;
+    max-width: 500px;
+    height: 1px;
+    background-color: var(--smoke-gray);
+    opacity: 0.5;
+}
+.arrow-icon {
+    background-color: var(--purple);
+    border-radius: 50%;
+    width: 25px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.date-output {
+    font-family: 'Poppins-ExtraBoldItalic', sans-serif;
+    font-size: 2.75em;
+    line-height: 1;
+}
+
+.date-output h1 {
+    margin: 1rem 0;
+}
+
+.date-output h1 span {
+    color: var(--purple);
+}
